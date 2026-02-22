@@ -1,0 +1,25 @@
+[Unit]
+Description=OpenClaw WebSocket Proxy
+After=network.target openclaw-gateway.service
+Wants=openclaw-gateway.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.openclaw/workspace/plugins/ws-proxy
+ExecStart=/root/.nvm/versions/node/v25.6.1/bin/node server.js
+Restart=on-failure
+RestartSec=5
+
+# Environment variables (optional)
+# Environment=PROXY_PORT=18790
+# Environment=GATEWAY_HOST=localhost
+# Environment=GATEWAY_PORT=18789
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=openclaw-ws-proxy
+
+[Install]
+WantedBy=multi-user.target

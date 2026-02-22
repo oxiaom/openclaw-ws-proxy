@@ -1,0 +1,37 @@
+{
+  "name": "openclaw-ws-proxy",
+  "version": "1.0.0",
+  "description": "WebSocket proxy for OpenClaw Control UI - auto-injects auth token",
+  "main": "server.js",
+  "bin": {
+    "openclaw-ws-proxy": "./bin/openclaw-ws-proxy.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "openclaw",
+    "websocket",
+    "proxy",
+    "control-ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openclaw/openclaw-ws-proxy"
+  },
+  "files": [
+    "server.js",
+    "bin/",
+    "install.sh",
+    "uninstall.sh",
+    "openclaw-ws-proxy.service"
+  ]
+}
